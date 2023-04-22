@@ -1,0 +1,9 @@
+<section class="container flex items-center flex-col justify-center">
+
+        <form action="{% url 'index' %}" class="flex flex-col m-0 " method="GET">
+            <div>
+                <input type="search" name="username" class="bg-slate-300 rounded-l font-medium w-[500px] p-3 outline-none" value="{% if  username %}{{ username }}{% endif %}" placeholder="Enter Github Username"><button type="submit" class="bg-[#2D333B] rounded-r font-medium px-8 py-3 text-slate-100">Search</button>
+            </div>
+        </form>
+
+</section>

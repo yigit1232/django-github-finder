@@ -1,0 +1,6 @@
+{% if error %}
+    <div class="absolute error bg-red-300 flex items-center justify-between rounded min-w-[250px] gap-5 p-3 bottom-10 left-10">
+        <p class="font-medium float-left text-red-900">{{ error }}</p>
+        <a class="cursor-pointer error-close"><svg width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="close"><path style="fill: #7f1D1D;" d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg></a>
+    </div>
+{% endif %}

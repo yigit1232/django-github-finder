@@ -1,0 +1,27 @@
+     <section class="p-3 bg-[#32445A] container rounded p-5 flex items-center justify-between">
+                <div class="flex gap-3 items-center">
+                <div><img src="{{ data.avatar_url }}" width="80" style="border-radius: 50%; object-fit: cover;" alt=""></div>
+                <div class="pr-5 border-slate-500  border-r "><h2 class="font-medium mb-1 text-slate-200 text-xl">{{ data.login }}</h2> <span class="text-slate-300">{% if data.location %}{{ data.location }} {% else %} Unspecified {% endif %} </span> </div>
+                <div class="flex gap-5 pl-5">
+                    <a class="text-center cursor-pointer followers">
+                        <p class="text-slate-200 font-medium text-xl">{{ data.followers }}</p>
+                        <p class="text-slate-300">Followers</p>
+                    </a>
+                     <a class="text-center cursor-pointer following">
+                        <p class="text-slate-200 font-medium text-xl">{{ data.following }}</p>
+                        <p class="text-slate-300">Following</p>
+                    </a>
+                     <h2 class="text-center">
+                        <p class="text-slate-200 font-medium text-xl">{{ data.public_repos }}</p>
+                        <p class="text-slate-300">Public repos</p>
+                    </h2>
+                     <h2 class="text-center">
+                        <p class="text-slate-200 font-medium text-xl">{{ data.public_gists }}</p>
+                        <p class="text-slate-300">Public gists</p>
+                    </h2>
+                </div>
+                </div>
+                <div>
+                    <a class="py-3 px-3 bg-white rounded font-medium text-[#32445A]" target="_blank" href="{{ data.html_url }}">Go to profile</a>
+                </div>
+    </section>

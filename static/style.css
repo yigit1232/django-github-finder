@@ -1,0 +1,10 @@
+.active{
+    display: flex !important;
+}
+.container{
+    width: 900px !important;
+    margin: 0px 20px !important;
+}
+.profile-content div{
+    width: 100% !important;
+}

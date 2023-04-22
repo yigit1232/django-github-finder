@@ -1,0 +1,24 @@
+<article class="hidden following-article fixed top-0 w-full h-full bg-slate-100/25 flex items-center justify-center">
+    <div class="w-[300px]  max-h-96 overflow-x-auto  rounded bg-[#2D333B]">
+        <div class="flex items-center p-3 border-slate-500 border-b justify-between">
+            <h2 class="text-center font-medium text-xl text-slate-200 border-slate-500">Following</h2>
+            <a class="cursor-pointer close-following">
+                <svg width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="close"><path style="fill: #fff;" d="M13.41,12l6.3-6.29a1,1,0,1,0-1.42-1.42L12,10.59,5.71,4.29A1,1,0,0,0,4.29,5.71L10.59,12l-6.3,6.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l6.29,6.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"></path></svg>
+            </a>
+        </div>
+        {% for follow in following %}
+        <div class="flex w-full items-center p-3 justify-between">
+            <div class="flex items-center gap-2">
+                <div><img src="{{ follow.avatar_url }}" width="35" style="border-radius: 50%; object-fit: cover;" alt=""></div>
+                <div><p class="text-slate-200 font-medium">{{ follow.login }}</p></div>
+            </div>
+            <div>
+                <div><a class="float-right border rounded bg-white text-[#2D333B] font-medium py-1 px-3" href="{% url 'index' %}?username={{ follow.login }} ">Go</a></div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+
+    </div>
+</article>
